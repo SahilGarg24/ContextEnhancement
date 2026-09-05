@@ -1,0 +1,20 @@
+# ============================================================
+#  Key Entities Ranking — configuration
+#  Edit the paths below for your client, then run run.bat
+#  Lines starting with # are comments and are ignored.
+# ============================================================
+
+# Client / project name (informational only)
+CLIENT=WLN
+
+# Config backup ZIP file (mandatory)
+CONFIG=C:\Users\sahil.garg\Documents\o9\APEX\Data\AT&T\WLN\ConfigBackup.zip
+
+# TenantLogs CSV file (mandatory)
+TENANT=C:\Users\sahil.garg\Documents\o9\APEX\Data\AT&T\WLN\TenantLogs.csv
+
+# AdoptionData CSV file — leave blank to skip
+ADOPTION=C:\Users\sahil.garg\Documents\o9\APEX\Data\AT&T\WLN\Adoption.csv
+
+# ELK PSR CSV file — leave blank to skip
+PSR=C:\Users\sahil.garg\Documents\o9\APEX\Data\AT&T\WLN\ELKPSRData.csv

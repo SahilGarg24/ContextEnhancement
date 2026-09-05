@@ -1,0 +1,730 @@
+{
+    "[Item].[Planning Item]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Lowest planning level for Demand Planning in IBP; can be a physical item or an aggregation of items (Item Group in PMF). Used as the DP working level for DFU creation, ST/MT forecast generation, and BOM explosion for supply planning."
+        },
+        {
+            "Business Capability": "Statistical & ML Forecast Generation",
+            "Attribute Description": "Lowest planning level for Demand Planning in IBP; can be a physical item or an aggregation of items (Item Group in PMF). Used as the DP working level for DFU creation, ST/MT forecast generation, and BOM explosion for supply planning."
+        }
+    ],
+    "[Item].[Item]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Lowest level in the item master, representing a unique SAP Item Code (selling SKU). It is the base unit for supply planning disaggregation, DFU creation, and all transactional data mapping in o9."
+        },
+        {
+            "Business Capability": "BOM & Production Planning",
+            "Attribute Description": "Lowest level in the item master, representing a unique SAP Item Code (selling SKU). It is the base unit for supply planning disaggregation, DFU creation, and all transactional data mapping in o9."
+        }
+    ],
+    "[Item].[L1]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "L1 Category – the top-level planning category (e.g., SNACKS). Used for the highest-level aggregation in IBP, financial planning, capacity planning, and UOM management defined at Category/Market level."
+        },
+        {
+            "Business Capability": "Financial & Revenue Forecasting",
+            "Attribute Description": "L1 Category – the top-level planning category (e.g., SNACKS). Used for the highest-level aggregation in IBP, financial planning, capacity planning, and UOM management defined at Category/Market level."
+        }
+    ],
+    "[Item].[L2]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Product Line (L2) – a set of products with common physical perception or marketplace application. Used for aggregation, reporting, and demand planning across related product families."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Product Line (L2) – a set of products with common physical perception or marketplace application. Used for aggregation, reporting, and demand planning across related product families."
+        }
+    ],
+    "[Item].[L3]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Product Group (L3) – a detailed breakdown of the Product Line representing the physical product perception (e.g., CORN CHIPS). Used for mid-tier aggregation in demand forecasting and S&OP reviews."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Product Group (L3) – a detailed breakdown of the Product Line representing the physical product perception (e.g., CORN CHIPS). Used for mid-tier aggregation in demand forecasting and S&OP reviews."
+        }
+    ],
+    "[Item].[L4]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Brand (L4) – the symbolic name creating a common set of consumer expectations. Central level for commercial performance measurement, MT forecast accuracy (Brand/IBP Demand Group lag), and forecast generation."
+        },
+        {
+            "Business Capability": "Forecast Performance Measurement",
+            "Attribute Description": "Brand (L4) – the symbolic name creating a common set of consumer expectations. Central level for commercial performance measurement, MT forecast accuracy (Brand/IBP Demand Group lag), and forecast generation."
+        }
+    ],
+    "[Item].[L5]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Sub-Brand (L5) – an extension of a Brand used for more targeted consumer segmentation. Key MT working level attribute (Sub-brand-Container-Size combination) for MT forecast generation and accuracy measurement."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Sub-Brand (L5) – an extension of a Brand used for more targeted consumer segmentation. Key MT working level attribute (Sub-brand-Container-Size combination) for MT forecast generation and accuracy measurement."
+        },
+        {
+            "Business Capability": "Forecast Performance Measurement",
+            "Attribute Description": "Sub-Brand (L5) – an extension of a Brand used for more targeted consumer segmentation. Key MT working level attribute (Sub-brand-Container-Size combination) for MT forecast generation and accuracy measurement."
+        }
+    ],
+    "[Item].[L6]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Container (L6) – describes the packaging format of the consumer unit (e.g., BAG, BOTTLE). Used as part of the MT working level combination (Sub-brand-Container-Size) and product performance filtering."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Container (L6) – describes the packaging format of the consumer unit (e.g., BAG, BOTTLE). Used as part of the MT working level combination (Sub-brand-Container-Size) and product performance filtering."
+        }
+    ],
+    "[Item].[Sub Brand]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Sub-Brand attribute (parallel or equivalent to L5) used for filtering, MT working level disaggregation, and forecast accuracy reporting across markets. Directly linked to main product hierarchy via item-level mapping."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Sub-Brand attribute (parallel or equivalent to L5) used for filtering, MT working level disaggregation, and forecast accuracy reporting across markets. Directly linked to main product hierarchy via item-level mapping."
+        }
+    ],
+    "[Item].[Flavor]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Flavor (L9) – the lowest level of the product hierarchy describing the taste profile or flavor identifier. Used for NPI benchmark flavor assignment, cannibalization rate calculations, and detailed ST demand decomposition."
+        },
+        {
+            "Business Capability": "Statistical & ML Forecast Generation",
+            "Attribute Description": "Flavor (L9) – the lowest level of the product hierarchy describing the taste profile or flavor identifier. Used for NPI benchmark flavor assignment, cannibalization rate calculations, and detailed ST demand decomposition."
+        }
+    ],
+    "[Item].[Container]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Container attribute (equivalent to L6) describing the packaging type of the consumer unit. Used in product hierarchy filtering, MT working level disaggregation combinations, and product performance analysis."
+        }
+    ],
+    "[Item].[Pack Size]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Pack size attribute (L7/Size equivalent) describing the weight or volume of the consumer unit. Used in cannibalization rate calculations, NPI benchmark size assignment, and MT forecast accuracy measurement."
+        },
+        {
+            "Business Capability": "Forecast Performance Measurement",
+            "Attribute Description": "Pack size attribute (L7/Size equivalent) describing the weight or volume of the consumer unit. Used in cannibalization rate calculations, NPI benchmark size assignment, and MT forecast accuracy measurement."
+        }
+    ],
+    "[Item].[Production Line]": [
+        {
+            "Business Capability": "BOM & Production Planning",
+            "Attribute Description": "Production Line attribute identifying the specific manufacturing line assigned to produce an item. Supports capacity analysis and production scheduling for bottleneck identification in supply planning."
+        },
+        {
+            "Business Capability": "Capacity Planning & Utilization",
+            "Attribute Description": "Production Line attribute identifying the specific manufacturing line assigned to produce an item. Supports capacity analysis and production scheduling for bottleneck identification in supply planning."
+        }
+    ],
+    "[Item].[Production Technology]": [
+        {
+            "Business Capability": "Capacity Planning & Utilization",
+            "Attribute Description": "Resource Technology attribute identifying the manufacturing process(es) used for each product type (e.g., TC-BAKED). Used for capacity planning and supply planning to understand production method constraints."
+        },
+        {
+            "Business Capability": "BOM & Production Planning",
+            "Attribute Description": "Resource Technology attribute identifying the manufacturing process(es) used for each product type (e.g., TC-BAKED). Used for capacity planning and supply planning to understand production method constraints."
+        }
+    ],
+    "[Item].[Supply Family 1]": [
+        {
+            "Business Capability": "Supply Planning Configuration & Solver Settings",
+            "Attribute Description": "Supply Planning Family (1 of up to 5 fields), manually maintained in o9, grouping items with similar supply characteristics (e.g., production technology, sourcing category) for supply planning purposes."
+        },
+        {
+            "Business Capability": "BOM & Production Planning",
+            "Attribute Description": "Supply Planning Family (1 of up to 5 fields), manually maintained in o9, grouping items with similar supply characteristics (e.g., production technology, sourcing category) for supply planning purposes."
+        }
+    ],
+    "[Item].[Item Type]": [
+        {
+            "Business Capability": "Planning Metadata & Administration",
+            "Attribute Description": "Item type classification (FG, ING, PKG, SFG, SUB) distinguishing finished goods from raw materials and packaging. Controls visibility in demand planning tenant (FG only) vs. supply planning (all types)."
+        },
+        {
+            "Business Capability": "BOM & Production Planning",
+            "Attribute Description": "Item type classification (FG, ING, PKG, SFG, SUB) distinguishing finished goods from raw materials and packaging. Controls visibility in demand planning tenant (FG only) vs. supply planning (all types)."
+        }
+    ],
+    "[Item].[Product Line]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Product Line attribute (parallel to L2) grouping products by common physical perception or market application. Used for filtering and aggregating demand data across related products during planning and reporting."
+        }
+    ],
+    "[Item].[Family]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Demand or Supply Planning Family attribute (one of up to 5 fields), manually maintained in o9, grouping items with similar demand behaviour. For FR, used to include S&OP Family groupings."
+        },
+        {
+            "Business Capability": "Supply Planning Configuration & Solver Settings",
+            "Attribute Description": "Demand or Supply Planning Family attribute (one of up to 5 fields), manually maintained in o9, grouping items with similar demand behaviour. For FR, used to include S&OP Family groupings."
+        }
+    ],
+    "[Item].[Classification]": [
+        {
+            "Business Capability": "Risk & Opportunity Management",
+            "Attribute Description": "R&O Classification attribute categorising demand adjustments by type (e.g., Demand Opportunity – Existing Initiative, Demand Risk, Demand Response to Supply Chain). Used to prioritize and filter R&O entries in IBP."
+        },
+        {
+            "Business Capability": "Demand Segmentation & Classification",
+            "Attribute Description": "R&O Classification attribute categorising demand adjustments by type (e.g., Demand Opportunity – Existing Initiative, Demand Risk, Demand Response to Supply Chain). Used to prioritize and filter R&O entries in IBP."
+        }
+    ],
+    "[Item].[Hero Segment]": [
+        {
+            "Business Capability": "Demand Segmentation & Classification",
+            "Attribute Description": "Hero Segment classification identifying strategically important SKUs within the portfolio. Used to focus planner effort and prioritize demand reviews on high-impact items during collaborative planning."
+        },
+        {
+            "Business Capability": "Demand Priority Management",
+            "Attribute Description": "Hero Segment classification identifying strategically important SKUs within the portfolio. Used to focus planner effort and prioritize demand reviews on high-impact items during collaborative planning."
+        }
+    ],
+    "[Item].[PLC Status]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Product Lifecycle status attribute indicating a product's lifecycle stage (Introduction, Active, Discontinuing). Drives automatic DFU activation/deactivation and the assortment measure (PLC) controlling which DFUs receive forecasts."
+        },
+        {
+            "Business Capability": "Demand Segmentation & Classification",
+            "Attribute Description": "Product Lifecycle status attribute indicating a product's lifecycle stage (Introduction, Active, Discontinuing). Drives automatic DFU activation/deactivation and the assortment measure (PLC) controlling which DFUs receive forecasts."
+        }
+    ],
+    "[Item].[Item Stage]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Item stage attribute indicating the current lifecycle stage of a product (NPD/dummy, active, transitioning, EOL). Used to manage DFU creation, PIPO mapping transitions, and assortment planning."
+        },
+        {
+            "Business Capability": "Historical Data Management & Cleansing",
+            "Attribute Description": "Item stage attribute indicating the current lifecycle stage of a product (NPD/dummy, active, transitioning, EOL). Used to manage DFU creation, PIPO mapping transitions, and assortment planning."
+        }
+    ],
+    "[Item].[Transition Item]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Flag identifying items involved in PIPO (Phase-In Phase-Out) or permanent substitution transitions. Manages DFU mapping during item transitions to ensure continuity of forecast history and smooth handover between codes."
+        },
+        {
+            "Business Capability": "Historical Data Management & Cleansing",
+            "Attribute Description": "Flag identifying items involved in PIPO (Phase-In Phase-Out) or permanent substitution transitions. Manages DFU mapping during item transitions to ensure continuity of forecast history and smooth handover between codes."
+        }
+    ],
+    "[Item].[Mosaic Category]": [
+        {
+            "Business Capability": "External Forecast Integration",
+            "Attribute Description": "Mosaic system's category attribute mapped from IBP product hierarchy for bi-directional data exchange between o9 and Mosaic (FP&A). Enables monetization and financial planning alignment at the Mosaic planning level."
+        },
+        {
+            "Business Capability": "Financial & Revenue Forecasting",
+            "Attribute Description": "Mosaic system's category attribute mapped from IBP product hierarchy for bi-directional data exchange between o9 and Mosaic (FP&A). Enables monetization and financial planning alignment at the Mosaic planning level."
+        }
+    ],
+    "[Item].[Mosaic Sub Brand]": [
+        {
+            "Business Capability": "External Forecast Integration",
+            "Attribute Description": "Mosaic system's sub-brand attribute used for mapping IBP sub-brand hierarchy to Mosaic's planning hierarchy. Enables many-to-one mapping for forecast aggregation and NR rate cascading to selling SKUs."
+        },
+        {
+            "Business Capability": "Financial & Revenue Forecasting",
+            "Attribute Description": "Mosaic system's sub-brand attribute used for mapping IBP sub-brand hierarchy to Mosaic's planning hierarchy. Enables many-to-one mapping for forecast aggregation and NR rate cascading to selling SKUs."
+        }
+    ],
+    "[Item].[Mosaic Harmonized Pack Type]": [
+        {
+            "Business Capability": "External Forecast Integration",
+            "Attribute Description": "Mosaic's harmonized pack type attribute, part of the 7-attribute combination that defines a Mosaic SKU. Used for item-to-Mosaic mapping to support forecast transmission and NR rate application in Data Lake."
+        }
+    ],
+    "[Item].[Mosaic Trademark]": [
+        {
+            "Business Capability": "External Forecast Integration",
+            "Attribute Description": "Mosaic trademark attribute used to identify brand/trademark entities in the Mosaic planning system. Maps to IBP product hierarchy levels for financial consolidation and Magic Triangle data exchange."
+        },
+        {
+            "Business Capability": "Financial & Revenue Forecasting",
+            "Attribute Description": "Mosaic trademark attribute used to identify brand/trademark entities in the Mosaic planning system. Maps to IBP product hierarchy levels for financial consolidation and Magic Triangle data exchange."
+        }
+    ],
+    "[Item].[Mosaic Local Selling SKU]": [
+        {
+            "Business Capability": "External Forecast Integration",
+            "Attribute Description": "Mosaic's Local Selling SKU identifier used to map o9 planning items to corresponding Mosaic selling units. Supports NR rate cascading and financial planning alignment in the Magic Triangle integration."
+        },
+        {
+            "Business Capability": "Financial & Revenue Forecasting",
+            "Attribute Description": "Mosaic's Local Selling SKU identifier used to map o9 planning items to corresponding Mosaic selling units. Supports NR rate cascading and financial planning alignment in the Magic Triangle integration."
+        }
+    ],
+    "[Item].[Mosaic SKU]": [
+        {
+            "Business Capability": "External Forecast Integration",
+            "Attribute Description": "Mosaic SKU identifier representing an aggregated product entity used in Mosaic (FP&A). A Mosaic SKU combines 7 ERP SKU attributes, enabling many-to-one mapping and NR rate cascading for financial data exchange."
+        },
+        {
+            "Business Capability": "Financial & Revenue Forecasting",
+            "Attribute Description": "Mosaic SKU identifier representing an aggregated product entity used in Mosaic (FP&A). A Mosaic SKU combines 7 ERP SKU attributes, enabling many-to-one mapping and NR rate cascading for financial data exchange."
+        }
+    ],
+    "[Item].[Mosaic Local Pack Type]": [
+        {
+            "Business Capability": "External Forecast Integration",
+            "Attribute Description": "Mosaic's local pack type attribute, one of the 7 attributes defining a Mosaic SKU. Used in the product mapping between IBP item hierarchy and Mosaic planning hierarchy for financial data exchange."
+        }
+    ],
+    "[Sales Domain].[Customer Group]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "IBPDemandGroup aggregation removing the sales region component; provides a consistent cross-regional customer view enabling demand data comparison and planning without regional granularity."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "IBPDemandGroup aggregation removing the sales region component; provides a consistent cross-regional customer view enabling demand data comparison and planning without regional granularity."
+        }
+    ],
+    "[Sales Domain].[Ship To]": [
+        {
+            "Business Capability": "Demand Fulfillment & Order Management",
+            "Attribute Description": "The entity that receives the delivery (point of goods receipt). Lowest level of the customer hierarchy in Turkey localization, replacing the globally used Sold-To as the base transactional customer entity for data assignment."
+        },
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "The entity that receives the delivery (point of goods receipt). Lowest level of the customer hierarchy in Turkey localization, replacing the globally used Sold-To as the base transactional customer entity for data assignment."
+        }
+    ],
+    "[Sales Domain].[Market Unit]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Two-digit market unit identifier (ISO country code) derived from the IBPDemandGroup naming convention. Controls planning visibility, IBP forum participation, and Mosaic submission exclusions per market boundary."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Two-digit market unit identifier (ISO country code) derived from the IBPDemandGroup naming convention. Controls planning visibility, IBP forum participation, and Mosaic submission exclusions per market boundary."
+        }
+    ],
+    "[Sales Domain].[Sub Channel]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Sub-Channel definition within each IBPDemandGroup providing a granular level between the IBP Demand Group and Channel. Part of the IBPDemandGroup naming convention for detailed commercial analysis and demand segmentation."
+        },
+        {
+            "Business Capability": "Revenue & Volume Outlook Item Tracking",
+            "Attribute Description": "Sub-Channel definition within each IBPDemandGroup providing a granular level between the IBP Demand Group and Channel. Part of the IBPDemandGroup naming convention for detailed commercial analysis and demand segmentation."
+        }
+    ],
+    "[Sales Domain].[Business Unit]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Business Unit level in the customer planning hierarchy representing the P&L-owning organizational unit. Segregates planning activities, forum participation, and Mosaic submission by business boundary (e.g., BNL vs. NOR)."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Business Unit level in the customer planning hierarchy representing the P&L-owning organizational unit. Segregates planning activities, forum participation, and Mosaic submission by business boundary (e.g., BNL vs. NOR)."
+        }
+    ],
+    "[Sales Domain].[Channel]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Channel definition embedded in the IBPDemandGroup naming convention (e.g., TT – Traditional Trade, OT – Off-Trade). Key aggregation level for commercial planning, promotion management, and forecast review."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Short Term)",
+            "Attribute Description": "Channel definition embedded in the IBPDemandGroup naming convention (e.g., TT – Traditional Trade, OT – Off-Trade). Key aggregation level for commercial planning, promotion management, and forecast review."
+        }
+    ],
+    "[Sales Domain].[Channel Group]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Channel aggregation removing the sales region component from the channel definition. Provides a consistent cross-regional channel view for demand analysis and commercial reporting without regional granularity."
+        },
+        {
+            "Business Capability": "Revenue & Volume Outlook Item Tracking",
+            "Attribute Description": "Channel aggregation removing the sales region component from the channel definition. Provides a consistent cross-regional channel view for demand analysis and commercial reporting without regional granularity."
+        }
+    ],
+    "[Sales Domain].[Key Account]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Key Account (KA) node in the SAP S4 customer hierarchy representing the business-defined planning customer entity. Used across FTS, TPM, and FP&A in the Magic Triangle integration to align on a common One Plan."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Key Account (KA) node in the SAP S4 customer hierarchy representing the business-defined planning customer entity. Used across FTS, TPM, and FP&A in the Magic Triangle integration to align on a common One Plan."
+        }
+    ],
+    "[Sales Domain].[Customer Class]": [
+        {
+            "Business Capability": "Demand Segmentation & Classification",
+            "Attribute Description": "Customer class segmentation (A/B/C) calculated in o9 based on volume and variability metrics. Used to differentiate planning treatment, focus planner effort, and support touchless planning strategies for lower-priority customers."
+        },
+        {
+            "Business Capability": "Demand Priority Management",
+            "Attribute Description": "Customer class segmentation (A/B/C) calculated in o9 based on volume and variability metrics. Used to differentiate planning treatment, focus planner effort, and support touchless planning strategies for lower-priority customers."
+        }
+    ],
+    "[Sales Domain].[Sector]": [
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Sector level in the customer and location hierarchies (e.g., ESSA – Europe Sub-Saharan Africa). The highest-level organizational aggregation above Regional Cluster used for global IBP forum reporting."
+        }
+    ],
+    "[Sales Domain].[Cluster]": [
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Regional Cluster level in the customer hierarchy grouping Business Units for cross-market planning review and IBP forum aggregation. Supports regional governance and cross-BU demand comparison."
+        }
+    ],
+    "[Sales Domain].[Division]": [
+        {
+            "Business Capability": "Planning Metadata & Administration",
+            "Attribute Description": "Division attribute representing the SAP sales area division component. Used in Key Account Technical ID (KATID) formation and customer master data xref for cross-system planning alignment across FTS, TPM, and FP&A."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Division attribute representing the SAP sales area division component. Used in Key Account Technical ID (KATID) formation and customer master data xref for cross-system planning alignment across FTS, TPM, and FP&A."
+        }
+    ],
+    "[Sales Domain].[Region]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Sales/geographic region in the customer hierarchy. Used for regional demand aggregation, S&OE forum reviews, and optionally included in IBPDemandGroup definitions where regional differentiation is required."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Sales/geographic region in the customer hierarchy. Used for regional demand aggregation, S&OE forum reviews, and optionally included in IBPDemandGroup definitions where regional differentiation is required."
+        }
+    ],
+    "[Sales Domain].[Country]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Country level in the sales domain hierarchy representing the market geography. Used for market-level demand reporting, macro factor driver data mapping by country, and IBP forum segmentation."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Country level in the sales domain hierarchy representing the market geography. Used for market-level demand reporting, macro factor driver data mapping by country, and IBP forum segmentation."
+        }
+    ],
+    "[Sales Domain].[Sold To]": [
+        {
+            "Business Capability": "Demand Fulfillment & Order Management",
+            "Attribute Description": "Sold-To entity representing the customer who places the purchase order. Lowest level of the global customer hierarchy; used in SSIS for data mapping and DFU creation but not visible on the o9 planning UI."
+        },
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Sold-To entity representing the customer who places the purchase order. Lowest level of the global customer hierarchy; used in SSIS for data mapping and DFU creation but not visible on the o9 planning UI."
+        }
+    ],
+    "[Location].[Location]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Planning Location – the lowest level of the location hierarchy used for both demand and supply planning. Represents physical distribution centers, plants, or warehouses at which forecasts are generated, stored, and managed."
+        },
+        {
+            "Business Capability": "Demand Sensing & Actuals Tracking",
+            "Attribute Description": "Planning Location – the lowest level of the location hierarchy used for both demand and supply planning. Represents physical distribution centers, plants, or warehouses at which forecasts are generated, stored, and managed."
+        }
+    ],
+    "[Location].[Location Type]": [
+        {
+            "Business Capability": "Supply Planning Configuration & Solver Settings",
+            "Attribute Description": "Parallel hierarchy classifying locations by type (DC, WH, PL, CP, CM, SU). Used to filter DP-relevant locations in demand planning tenant and manage VMI/non-VMI reconciliation in Turkey."
+        },
+        {
+            "Business Capability": "Inventory Planning & Management",
+            "Attribute Description": "Parallel hierarchy classifying locations by type (DC, WH, PL, CP, CM, SU). Used to filter DP-relevant locations in demand planning tenant and manage VMI/non-VMI reconciliation in Turkey."
+        }
+    ],
+    "[Location].[Location Region]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Regional grouping of planning locations for geographical aggregation in demand and supply planning. Supports market-level reporting and holiday/event management which is stored at region level in o9."
+        },
+        {
+            "Business Capability": "Supply Planning Configuration & Solver Settings",
+            "Attribute Description": "Regional grouping of planning locations for geographical aggregation in demand and supply planning. Supports market-level reporting and holiday/event management which is stored at region level in o9."
+        }
+    ],
+    "[Customer].[Customer]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Customer/Sold-To entity in the SAP S4 customer hierarchy; represents the actual ordering customer mapped to the IBP planning hierarchy. Supports DFU mapping and transactional data assignment at the lowest customer level."
+        },
+        {
+            "Business Capability": "Demand Fulfillment & Order Management",
+            "Attribute Description": "Customer/Sold-To entity in the SAP S4 customer hierarchy; represents the actual ordering customer mapped to the IBP planning hierarchy. Supports DFU mapping and transactional data assignment at the lowest customer level."
+        }
+    ],
+    "[Customer].[Country]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Country level in the customer hierarchy representing the geographic market. Used for geographical aggregation of demand data, driver data mapping at country level, and market-level reporting in IBP forums."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Country level in the customer hierarchy representing the geographic market. Used for geographical aggregation of demand data, driver data mapping at country level, and market-level reporting in IBP forums."
+        }
+    ],
+    "[Customer].[Region]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Customer region attribute representing sales geographic regions within a market. Optionally included in IBPDemandGroup definitions and used as a parallel hierarchy to filter and aggregate demand by sales territory."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Customer region attribute representing sales geographic regions within a market. Optionally included in IBPDemandGroup definitions and used as a parallel hierarchy to filter and aggregate demand by sales territory."
+        }
+    ],
+    "[Time].[Partial Week]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Time attribute representing partial weeks spanning two calendar months. Used with ratio-based disaggregation to correctly allocate weekly forecasts to monthly buckets, accounting for working days and holidays per market."
+        },
+        {
+            "Business Capability": "Statistical & ML Forecast Generation",
+            "Attribute Description": "Time attribute representing partial weeks spanning two calendar months. Used with ratio-based disaggregation to correctly allocate weekly forecasts to monthly buckets, accounting for working days and holidays per market."
+        }
+    ],
+    "[Time].[Month]": [
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Monthly time bucket used for Mid-Term (MT) demand planning horizons. Supports 24-month forward forecasts and historical analysis; primary time bucket for MT driver-based and financial planning alignment."
+        },
+        {
+            "Business Capability": "Annual Operating Plan (AOP) Management",
+            "Attribute Description": "Monthly time bucket used for Mid-Term (MT) demand planning horizons. Supports 24-month forward forecasts and historical analysis; primary time bucket for MT driver-based and financial planning alignment."
+        }
+    ],
+    "[Time].[Week]": [
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Short Term)",
+            "Attribute Description": "Weekly time bucket used for Short-Term (ST) demand planning. Forecast Engine provides forecast at week level, then o9 disaggregates to partial week and day using ratio logic."
+        },
+        {
+            "Business Capability": "Demand Sensing & Actuals Tracking",
+            "Attribute Description": "Weekly time bucket used for Short-Term (ST) demand planning. Forecast Engine provides forecast at week level, then o9 disaggregates to partial week and day using ratio logic."
+        }
+    ],
+    "[Time].[Year]": [
+        {
+            "Business Capability": "Annual Operating Plan (AOP) Management",
+            "Attribute Description": "Year level in the time hierarchy used for long-range planning, annual operating plan comparisons, YTD/YTG summations, and multi-year historical data analysis."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Year level in the time hierarchy used for long-range planning, annual operating plan comparisons, YTD/YTG summations, and multi-year historical data analysis."
+        }
+    ],
+    "[Time].[Quarter]": [
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Quarter-level time bucket used for S&OP and IBP forum reviews, QTD summations, and financial planning alignment across the planning horizon."
+        },
+        {
+            "Business Capability": "Annual Operating Plan (AOP) Management",
+            "Attribute Description": "Quarter-level time bucket used for S&OP and IBP forum reviews, QTD summations, and financial planning alignment across the planning horizon."
+        }
+    ],
+    "[Time].[Day]": [
+        {
+            "Business Capability": "Demand Sensing & Actuals Tracking",
+            "Attribute Description": "Day-level time attribute for demand sensing disaggregation and daily forecast distribution. Daily proportions are provided by Forecast Engine and used to disaggregate weekly forecasts to daily level for S&OE operations."
+        }
+    ],
+    "[Time].[_Attribute]": [
+        {
+            "Business Capability": "Planning Metadata & Administration",
+            "Attribute Description": "Internal o9 time dimension attribute used for system-level configuration of time hierarchy properties. Supports platform metadata management and system-calculated time-based computations."
+        }
+    ],
+    "[Time].[_NamedSet]": [
+        {
+            "Business Capability": "Forecast Performance Measurement",
+            "Attribute Description": "Named sets in the time hierarchy (YTD, MTD, QTD, WTD, YTG, QTG, MTG, WTG) used for period-to-date and period-to-go aggregations in reporting and planning screens across all IBP modules."
+        },
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Named sets in the time hierarchy (YTD, MTD, QTD, WTD, YTG, QTG, MTG, WTG) used for period-to-date and period-to-go aggregations in reporting and planning screens across all IBP modules."
+        }
+    ],
+    "[UOM].[UOM]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Unit of Measure dimension used to express all transactional data (historical and forecast) in Planning UOM (Cases, Tonnes, EA, KG, PAL, etc.) defined at Market/Category level. Enables planners to view and edit forecasts in their preferred UOM while ensuring consistent downstream system integration."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Unit of Measure dimension used to express all transactional data (historical and forecast) in Planning UOM (Cases, Tonnes, EA, KG, PAL, etc.) defined at Market/Category level. Enables planners to view and edit forecasts in their preferred UOM while ensuring consistent downstream system integration."
+        },
+        {
+            "Business Capability": "Financial & Revenue Forecasting",
+            "Attribute Description": "Unit of Measure dimension used to express all transactional data (historical and forecast) in Planning UOM (Cases, Tonnes, EA, KG, PAL, etc.) defined at Market/Category level. Enables planners to view and edit forecasts in their preferred UOM while ensuring consistent downstream system integration."
+        }
+    ],
+    "[Initiative].[Initiative]": [
+        {
+            "Business Capability": "Risk & Opportunity Management",
+            "Attribute Description": "Initiative dimension capturing holidays, events, R&O items, and promotional activities as planning initiatives. Links driver data to forecast adjustments and R&O management workflows in o9."
+        },
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Initiative dimension capturing holidays, events, R&O items, and promotional activities as planning initiatives. Links driver data to forecast adjustments and R&O management workflows in o9."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Short Term)",
+            "Attribute Description": "Initiative dimension capturing holidays, events, R&O items, and promotional activities as planning initiatives. Links driver data to forecast adjustments and R&O management workflows in o9."
+        }
+    ],
+    "[Version].[Version Type]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Version type dimension distinguishing between different planning scenarios and versions (e.g., Plan, Actual, Baseline, Consensus, AOP). Enables parallel version management for scenario comparison in IBP workflows."
+        },
+        {
+            "Business Capability": "Annual Operating Plan (AOP) Management",
+            "Attribute Description": "Version type dimension distinguishing between different planning scenarios and versions (e.g., Plan, Actual, Baseline, Consensus, AOP). Enables parallel version management for scenario comparison in IBP workflows."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Version type dimension distinguishing between different planning scenarios and versions (e.g., Plan, Actual, Baseline, Consensus, AOP). Enables parallel version management for scenario comparison in IBP workflows."
+        }
+    ],
+    "[_SchemaDimension].[_Dimension]": [
+        {
+            "Business Capability": "Planning Metadata & Administration",
+            "Attribute Description": "Internal o9 schema dimension used for system configuration and data model metadata management of the planning platform. Not used directly for business planning but supports platform architecture and hierarchy integrity."
+        }
+    ],
+    "[Transient].[Adjustments]": [
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Transient dimension capturing in-flight forecast adjustments and overrides made by planners during collaborative sessions, prior to being committed to the consensus plan in o9."
+        },
+        {
+            "Business Capability": "Risk & Opportunity Management",
+            "Attribute Description": "Transient dimension capturing in-flight forecast adjustments and overrides made by planners during collaborative sessions, prior to being committed to the consensus plan in o9."
+        }
+    ],
+    "[Transient].[f7e13e6d...]": [
+        {
+            "Business Capability": "Planning Metadata & Administration",
+            "Attribute Description": "Internal transient system dimension with a hashed/generated identifier used for temporary in-session planning computations in o9. Represents a system-level technical dimension not exposed directly to business users."
+        }
+    ],
+    "[measure].[Interdependent Association]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Quantitative measure tracking interdependency associations between SKUs (e.g., promotional/regular code pairs, PIPO source/destination mappings). Enables cannibalization and substitution impact quantification across related product combinations."
+        },
+        {
+            "Business Capability": "Risk & Opportunity Management",
+            "Attribute Description": "Quantitative measure tracking interdependency associations between SKUs (e.g., promotional/regular code pairs, PIPO source/destination mappings). Enables cannibalization and substitution impact quantification across related product combinations."
+        }
+    ],
+    "[measure].[Product Line expansion existing cust]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Quantitative measure tracking volume contribution from product line expansion into existing customer accounts, forming part of the demand building block decomposition for NPI and portfolio growth tracking."
+        },
+        {
+            "Business Capability": "Revenue & Volume Outlook Item Tracking",
+            "Attribute Description": "Quantitative measure tracking volume contribution from product line expansion into existing customer accounts, forming part of the demand building block decomposition for NPI and portfolio growth tracking."
+        }
+    ],
+    "[measure].[Final Multiplying Factor]": [
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Short Term)",
+            "Attribute Description": "Final multiplying factor applied to base forecasts during driver-based forecast generation. Represents the combined multiplicative effect of all demand drivers (promotions, pricing, seasonality) on the baseline to produce the final adjusted volume."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Mid/Long Term)",
+            "Attribute Description": "Final multiplying factor applied to base forecasts during driver-based forecast generation. Represents the combined multiplicative effect of all demand drivers (promotions, pricing, seasonality) on the baseline to produce the final adjusted volume."
+        }
+    ],
+    "[measure].[Portfolio Evolution]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Measure quantifying the demand impact of portfolio changes including new product introductions, phase-outs, reformulations, and product line transitions over the planning horizon; used as a demand building block."
+        },
+        {
+            "Business Capability": "Revenue & Volume Outlook Item Tracking",
+            "Attribute Description": "Measure quantifying the demand impact of portfolio changes including new product introductions, phase-outs, reformulations, and product line transitions over the planning horizon; used as a demand building block."
+        }
+    ],
+    "[measure].[Promotions Investment]": [
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Short Term)",
+            "Attribute Description": "Quantitative measure capturing the financial investment in promotional activities (trade promotions, consumer promotions). Used as a driver input for forecast generation and promotion ROI/effectiveness tracking."
+        },
+        {
+            "Business Capability": "Financial & Revenue Forecasting",
+            "Attribute Description": "Quantitative measure capturing the financial investment in promotional activities (trade promotions, consumer promotions). Used as a driver input for forecast generation and promotion ROI/effectiveness tracking."
+        }
+    ],
+    "[measure].[Cannibalization]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Measure quantifying demand volume cannibalised from existing SKUs as a result of promotional activity, NPI launches, or substitution events. Used in demand decomposition to separate true incremental demand from volume transfer effects."
+        },
+        {
+            "Business Capability": "Driver-Based Forecast Generation (Short Term)",
+            "Attribute Description": "Measure quantifying demand volume cannibalised from existing SKUs as a result of promotional activity, NPI launches, or substitution events. Used in demand decomposition to separate true incremental demand from volume transfer effects."
+        },
+        {
+            "Business Capability": "Risk & Opportunity Management",
+            "Attribute Description": "Measure quantifying demand volume cannibalised from existing SKUs as a result of promotional activity, NPI launches, or substitution events. Used in demand decomposition to separate true incremental demand from volume transfer effects."
+        }
+    ],
+    "[measure].[External forecast Adj]": [
+        {
+            "Business Capability": "External Forecast Integration",
+            "Attribute Description": "Measure capturing forecast adjustments from external systems (e.g., Mosaic/FP&A, JDA) to reconcile differences between internal statistical forecasts and external commercial views; part of the Magic Triangle consensus process."
+        },
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Measure capturing forecast adjustments from external systems (e.g., Mosaic/FP&A, JDA) to reconcile differences between internal statistical forecasts and external commercial views; part of the Magic Triangle consensus process."
+        }
+    ],
+    "[measure].[DFU Active]": [
+        {
+            "Business Capability": "NPI & Portfolio Lifecycle Management",
+            "Attribute Description": "Binary flag (1/0) indicating whether a Demand Forecast Unit is currently active for forecasting, automatically determined by the DFU's introduction and discontinuation dates. Controls which DFUs receive forecast generation and disaggregation."
+        },
+        {
+            "Business Capability": "Statistical & ML Forecast Generation",
+            "Attribute Description": "Binary flag (1/0) indicating whether a Demand Forecast Unit is currently active for forecasting, automatically determined by the DFU's introduction and discontinuation dates. Controls which DFUs receive forecast generation and disaggregation."
+        },
+        {
+            "Business Capability": "Planning Metadata & Administration",
+            "Attribute Description": "Binary flag (1/0) indicating whether a Demand Forecast Unit is currently active for forecasting, automatically determined by the DFU's introduction and discontinuation dates. Controls which DFUs receive forecast generation and disaggregation."
+        }
+    ],
+    "[measure].[Total R&O Adjustments]": [
+        {
+            "Business Capability": "Risk & Opportunity Management",
+            "Attribute Description": "Aggregated measure of all Risk & Opportunity adjustments applied to the demand forecast, representing the net volumetric impact of identified risks and opportunities above/below the consensus baseline plan."
+        },
+        {
+            "Business Capability": "Collaborative Demand Planning & Consensus",
+            "Attribute Description": "Aggregated measure of all Risk & Opportunity adjustments applied to the demand forecast, representing the net volumetric impact of identified risks and opportunities above/below the consensus baseline plan."
+        },
+        {
+            "Business Capability": "S&OP / IBP Integration",
+            "Attribute Description": "Aggregated measure of all Risk & Opportunity adjustments applied to the demand forecast, representing the net volumetric impact of identified risks and opportunities above/below the consensus baseline plan."
+        }
+    ]
+}
